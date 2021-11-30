@@ -16,10 +16,6 @@ rootProject.allprojects {
     repositories {
         google()
         mavenCentral()
-        maven { url "https://s3.amazonaws.com/moat-sdk-builds" }
-        maven { url 'https://maven.google.com' }
-        maven { url 'https://tapjoy.bintray.com/maven' }
-        maven { url 'https://adcolony.bintray.com/AdColony' }
     }
 }
 
@@ -43,8 +39,15 @@ android {
 }
 
 dependencies {
-    implementation('com.mopub:mopub-sdk:5.18.0@aar') {
+    implementation 'com.google.android.gms:play-services-ads:20.3.0'
+    implementation 'com.google.android.gms:play-services-ads-identifier:17.1.0';
+    implementation 'com.google.android.gms:play-services-base:17.6.0';
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation('com.mopub:mopub-sdk:+@aar') {
         transitive = true
     }
+    implementation 'com.mopub.mediation:admob:20.3.0.0'
+    implementation 'com.facebook.android:audience-network-sdk:6.7.0'
+    implementation 'com.mopub.mediation:facebookaudiencenetwork:6.7.0.0'
 }
 
